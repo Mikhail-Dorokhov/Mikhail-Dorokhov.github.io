@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  max-width: 1920px;
+  min-height: 760px;
+  position: relative;
+
+  grid-gap: 0px;
+
+  grid-template-areas:	"projImg1 projImg1 projBlurb1"
+                        "proj_blurb2 proj_img2 proj_img2";
+
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr
+
+}
+
+.projImg1 {
+  grid-area: projImg1;
+  background-image: url(media/website.png);
+  background-size: cover;
+
+}
+
+.projBlurb1 {
+  grid-area: projBlurb1;
+  background-color: pink;
+  padding:15px;
+  font-size: 16px;
+}
+
+.proj_img2 {
+  grid-area: proj_img2;
+  background-color: purple;
+}
+
+.proj_blurb2 {
+  grid-area: proj_blurb2;
+  background-color: blue;
+}
+
+body {
+    margin: 0px;
+}

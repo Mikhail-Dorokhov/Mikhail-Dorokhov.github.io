@@ -1,0 +1,243 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  max-width: 1920px;
+  min-height: 760px;
+  position: relative;
+  margin: auto;
+  grid-gap: 0px;
+
+  grid-template-areas:	"logo logo about projects contact"
+    										"banner_quote banner_quote banner_quote banner_quote banner_quote";
+
+
+  grid-template-columns:2fr 7fr 1fr 1fr 1fr;
+  grid-template-rows: 52px 1fr;
+}
+
+.logo {
+  grid-area: logo;
+  color: white;
+  padding-left: 135px;
+  padding-top: 0px;
+
+  background-color: #070718;
+
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+
+  border-bottom: 2px solid yellow;
+}
+
+.about_me {
+  grid-area: about;
+  padding-right: 10px;
+  padding-top: 0px;
+  color: white;
+  background-color: #070718;
+  text-align: center;
+
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 2px solid yellow;
+}
+
+.personal_proj {
+  grid-area: projects;
+  padding-right: 10px;
+  color: white;
+  background-color: #070718;
+  text-align: center;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 0px;
+  border-bottom: 2px solid yellow;
+}
+
+.personal_proj:hover, .contact:hover, .about_me:hover  {
+  color: #808080;
+}
+
+.personal_proj:active, .contact:active, .about_me:active  {
+  color: #808080;
+  padding-top: 5px;
+}
+
+.contact {
+  grid-area: contact;
+  padding-top: 0px;
+
+  color: white;
+  background-color: #070718;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  /*border-bottom: 2px solid #505050;*/
+  border-bottom: 2px solid yellow;
+}
+
+.banner_quote {
+  grid-area: banner_quote;
+  color:yellow; /*rgb(255,210,210,.9);*/
+  text-align: center;
+  filter: brightness(120%);
+  background-image: url(media/triangles.png);
+  font-size: 5rem;
+  padding-top: 130px;
+  border-bottom: 4px solid yellow;
+  margin-bottom: -6px;
+}
+
+.ArrowContainer {
+  float: left;
+  position: relative;
+  left: 50%;
+  padding-top: 2%;
+}
+
+ #downArrow {
+    float: left;
+    position: relative;
+    left: -50%;
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 50px solid white;
+}
+
+
+a {
+  color:inherit;
+  text-decoration: none;
+ }
+
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexRight {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.flexLeft {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 20px;
+}
+
+.about {
+  display: grid;
+  max-width: 1920px;
+  min-height: 680px;
+
+
+  margin: 0px;
+  padding-top: 20px;
+
+  grid-gap: 20px;
+  background-image: url("media/purpleGeo.jpeg");
+  background-blend-mode: overlay;
+  background-size: cover;
+  grid-template-areas:  ". pitch pitch pitch"
+                        ". proj photo contactMe";
+
+
+  grid-template-columns: 3fr repeat(3, 1fr);
+  grid-template-rows: 2fr 150px;
+
+}
+
+.contactMe {
+  grid-area: contactMe;
+  color: #FFFF00;
+  background-color: #4B0082;
+
+  font-family: Arial;
+  font-weight: bold;
+  margin-bottom: 90px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.proj {
+  grid-area: proj;
+  color: #FFFF00;
+  background-color: #4B0082;
+  margin-bottom: 90px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.photo {
+  grid-area: photo;
+  color: #FFFF00;
+  background-color: #4B0082;
+  font-family: Arial;
+  font-weight: bold;
+  margin-bottom: 90px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.contactMe:hover, .photo:hover, .proj:hover {
+  color: #AAAAAA;
+}
+
+.contactMe:active, .photo:active, .proj:active  {
+  color: #AAAAAA;
+  padding-top: 5px;
+}
+
+
+.pitch {
+  float: left;
+  grid-area: pitch;
+  background: transparent;
+  color: #400000;
+  padding-top: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-left: 30px;
+  font-size: 21px;
+  font-family: Georgia;
+
+}
+
+.headshot {
+  grid-area: headshot;
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-position: center;
+}
+
+.headshot img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+}

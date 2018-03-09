@@ -1,0 +1,22 @@
+body {
+  background-blend-mode:overlay;
+  background-image: url(media/contactBack.jpeg);
+  background-color: rgba(120,20,150,.8);
+  background-size:cover;
+}
+
+.text {
+  float: left;
+  position: relative;
+  left: 10%;
+  padding-top: 15%;
+  color: #DFDF00;
+}
+
+.info  {
+  float: left;
+  position: relative;
+  left: 23%;
+  padding-top: 15%;
+  color: #DFDF00;
+}

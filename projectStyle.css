@@ -4,14 +4,14 @@
   min-height: 760px;
   position: relative;
 
-  grid-gap: 0px;
-
   grid-template-areas:	"projImg1 projImg1 projBlurb1"
                         "proj_blurb2 proj_img2 proj_img2";
 
 
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 6px;
+  grid-row-gap: 10px;
 
 }
 
@@ -27,18 +27,22 @@
   background-color: pink;
   padding:15px;
   font-size: 16px;
+
 }
 
 .proj_img2 {
   grid-area: proj_img2;
-  background-color: purple;
+  background-image: url(media/mouse.jpg);
+  background-size: cover;
 }
 
 .proj_blurb2 {
   grid-area: proj_blurb2;
-  background-color: blue;
+  background-color: #FF86C2;
 }
+
 
 body {
     margin: 0px;
+    background-color: black;
 }

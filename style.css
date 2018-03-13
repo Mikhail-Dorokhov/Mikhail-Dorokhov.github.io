@@ -10,7 +10,7 @@ body {
 .grid {
   display: grid;
   max-width: 1920px;
-  min-height: 760px;
+  min-height: 700px;
   position: relative;
   margin: auto;
   grid-gap: 0px;
@@ -19,8 +19,8 @@ body {
     										"banner_quote banner_quote banner_quote banner_quote banner_quote";
 
 
-  grid-template-columns:2fr 7fr 1fr 1fr 1fr;
-  grid-template-rows: 52px 1fr;
+  grid-template-columns: 2fr 7fr 1fr 1fr 1fr;
+  grid-template-rows: 5vh 95vh;
 }
 
 .logo {
@@ -89,7 +89,7 @@ body {
   color:yellow; /*rgb(255,210,210,.9);*/
   text-align: center;
   filter: brightness(120%);
-  background-image: url(media/triangles.png);
+  background-image: url(media/mainBackground.png);
   font-size: 5rem;
   padding-top: 130px;
   border-bottom: 4px solid yellow;
@@ -222,7 +222,7 @@ a {
   margin-top: 0px;
   margin-left: 30px;
   font-size: 21px;
-  font-family: Georgia;
+  font-family: Arial;
 
 }
 

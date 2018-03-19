@@ -7,6 +7,7 @@ body {
   margin: 0;
 }
 
+
 .grid {
   display: grid;
   max-width: 1920px;
@@ -20,47 +21,41 @@ body {
 
 
   grid-template-columns: 2fr 7fr 1fr 1fr 1fr;
-  grid-template-rows: 5vh 95vh;
+  grid-template-rows: 5vh 100vh;
+}
+
+.topBar {
+  color: black;
+  background-color: white;
 }
 
 .logo {
   grid-area: logo;
-  color: white;
   padding-left: 135px;
   padding-top: 0px;
-
-  background-color: #070718;
-
-  font-weight: 700;
+  font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 
-  border-bottom: 2px solid yellow;
 }
 
 .about_me {
   grid-area: about;
   padding-right: 10px;
   padding-top: 0px;
-  color: white;
-  background-color: #070718;
   text-align: center;
 
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
-  border-bottom: 2px solid yellow;
 }
 
 .personal_proj {
   grid-area: projects;
   padding-right: 10px;
-  color: white;
-  background-color: #070718;
   text-align: center;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 0px;
-  border-bottom: 2px solid yellow;
 }
 
 .personal_proj:hover, .contact:hover, .about_me:hover  {
@@ -76,31 +71,29 @@ body {
   grid-area: contact;
   padding-top: 0px;
 
-  color: white;
-  background-color: #070718;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  /*border-bottom: 2px solid #505050;*/
-  border-bottom: 2px solid yellow;
+
 }
 
 .banner_quote {
   grid-area: banner_quote;
-  color:yellow; /*rgb(255,210,210,.9);*/
+  color:yellow;
   text-align: center;
-  filter: brightness(120%);
-  background-image: url(media/mainBackground.png);
+  filter: brightness(100%);
+  background: url(media/boston.jpg) no-repeat center center;
+  background-size: cover;
   font-size: 5rem;
   padding-top: 130px;
   border-bottom: 4px solid yellow;
-  margin-bottom: -6px;
+
 }
 
 .ArrowContainer {
   float: left;
   position: relative;
   left: 50%;
-  padding-top: 2%;
+  padding-top: 10vh;
 }
 
  #downArrow {

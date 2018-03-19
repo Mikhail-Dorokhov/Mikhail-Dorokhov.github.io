@@ -2,7 +2,7 @@ body {
   background-blend-mode:overlay;
   background-image: url(media/contactBack.jpeg);
   background-color: rgba(120,20,150,.8);
-  background-size:cover;
+  background-size: cover;
 }
 
 .text {
@@ -16,7 +16,7 @@ body {
 .info  {
   float: left;
   position: relative;
-  left: 23%;
+  left: 30%;
   padding-top: 15%;
   color: #DFDF00;
 }

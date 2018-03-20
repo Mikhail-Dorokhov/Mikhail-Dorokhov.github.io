@@ -34,11 +34,11 @@ div h1 {
 }
 
 body {
-  background-color: #604080;
+  background-color: #dcdccc;
 }
 
 #title {
-  color: #dddd00;
+  color: #201020;
   padding-bottom: 15%;
   font-size: 45px;
   height: 100vh;
@@ -60,5 +60,5 @@ body {
     height: 0;
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
-    border-top: 50px solid white;
+    border-top: 50px solid #201020;;
 }

@@ -78,7 +78,7 @@ body {
 
 .banner_quote {
   grid-area: banner_quote;
-  color:yellow;
+  color: #FFFFFF;
   text-align: center;
   filter: brightness(100%);
   background: url(media/boston.jpg) no-repeat center center;
@@ -93,7 +93,7 @@ body {
   float: left;
   position: relative;
   left: 50%;
-  padding-top: 10vh;
+  padding-top: 20vh;
 }
 
  #downArrow {
@@ -157,8 +157,8 @@ a {
 
 .contactMe {
   grid-area: contactMe;
-  color: #FFFF00;
-  background-color: #4B0082;
+  color: white;
+  background-color: black;
 
   font-family: Arial;
   font-weight: bold;
@@ -171,8 +171,8 @@ a {
 
 .proj {
   grid-area: proj;
-  color: #FFFF00;
-  background-color: #4B0082;
+  color: white;
+  background-color: black;
   margin-bottom: 90px;
   padding-bottom: 10px;
   margin-left: 10px;
@@ -184,8 +184,8 @@ a {
 
 .photo {
   grid-area: photo;
-  color: #FFFF00;
-  background-color: #4B0082;
+  color: white;
+  background-color: black;
   font-family: Arial;
   font-weight: bold;
   margin-bottom: 90px;
@@ -209,7 +209,7 @@ a {
   float: left;
   grid-area: pitch;
   background: transparent;
-  color: #400000;
+  color: black;
   padding-top: 0px;
   padding-right: 0px;
   margin-top: 0px;

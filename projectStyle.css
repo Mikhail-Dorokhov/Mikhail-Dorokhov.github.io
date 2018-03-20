@@ -46,3 +46,7 @@ body {
     margin: 0px;
     background-color: black;
 }
+
+h3, p {
+  padding: 20px;
+}

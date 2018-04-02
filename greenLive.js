@@ -3,7 +3,7 @@ var pre_away = 0;
 
 //Sync with the realtime predictions every 15 seconds to maintain accuracy
 setInterval(function() {
-  $.getJSON("http://realtime.mbta.com/developer/api/v2/predictionsbystop?api_key=VFP6UU1pqE6wpD9QGpXItg&stop=70243&format=json", function(data) {
+  $.getJSON("https://realtime.mbta.com/developer/api/v2/predictionsbystop?api_key=VFP6UU1pqE6wpD9QGpXItg&stop=70243&format=json", function(data) {
     console.log("15 second sync")
   })
   .done(function(data) {
@@ -23,7 +23,7 @@ setInterval(function() {
   //Refreshes predition time
   if(pre_away === 0) {
     //API call that gets a JSON object
-    $.getJSON("http://realtime.mbta.com/developer/api/v2/predictionsbystop?api_key=VFP6UU1pqE6wpD9QGpXItg&stop=70243&format=json", function(data) {
+    $.getJSON("https://realtime.mbta.com/developer/api/v2/predictionsbystop?api_key=VFP6UU1pqE6wpD9QGpXItg&stop=70243&format=json", function(data) {
       console.log("API request")
     })
     .done(function(data) {

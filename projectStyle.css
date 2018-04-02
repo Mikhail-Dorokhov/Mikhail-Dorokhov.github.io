@@ -5,11 +5,12 @@
   position: relative;
 
   grid-template-areas:	"projImg1 projImg1 projBlurb1"
-                        "proj_blurb2 proj_img2 proj_img2";
+                        "projBlurb2 projImg2 projImg2"
+                        "projImg3 projImg3 projBlurb3";
 
 
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 50vh 50vh;
+  grid-template-rows: 50vh 50vh 50vh;
   grid-gap: 6px;
   grid-row-gap: 10px;
 
@@ -19,27 +20,46 @@
   grid-area: projImg1;
   background-image: url(media/website.png);
   background-size: cover;
+  filter: grayscale(100%);
 
 }
 
 .projBlurb1 {
   grid-area: projBlurb1;
-  background-color: pink;
+  background-color: white;
   padding:15px;
   font-size: 16px;
 
 }
 
-.proj_img2 {
-  grid-area: proj_img2;
+.projImg2 {
+  grid-area: projImg2;
   background-image: url(media/mouse.jpg);
   background-size: cover;
+  filter: grayscale(100%);
 }
 
-.proj_blurb2 {
-  grid-area: proj_blurb2;
-  background-color: #FF86C2;
+.projBlurb2 {
+  grid-area: projBlurb2;
+  background-color: white;
 }
+
+.projImg3 {
+  grid-area: projImg3;
+  background-image: url(media/subway.jpg);
+  background-size: cover;
+  filter: grayscale(100%);
+
+}
+
+.projBlurb3 {
+  grid-area: projBlurb3;
+  background-color: white;
+  padding:15px;
+  font-size: 16px;
+
+}
+
 
 
 body {

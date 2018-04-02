@@ -1,0 +1,9 @@
+#green-in {
+  display: inline-block;
+}
+
+#green {
+   background-color: green;
+  color: white;
+  width: 290px
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Hubway Navigator</title>
+        <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="floating-panel">
+    <b>Start: </b>
+    <select id="start">
+      <option value="Columbus Ave,Boston, MA 02120">Northeastern University</option>
+      <option value="142 Dartmouth St, Boston, MA 02116">Back Bay Station</option>
+      <option value="1 Science Park, Boston, MA 02114 ">Museum of Science</option>
+      <option value="9 Union St, Boston, MA 02108">Faneuil Hall</option>
+      <option value="100 Nashua St, Boston, MA 02114">TD Garden</option>
+      <option value="1360-1366 Massachusetts Ave, Cambridge, MA 02138">Harvard University</option>
+      <option value="47-55 Massachusetts Ave, Cambridge, MA 02142">MIT</option>
+      <option value="70 Beacon St, Boston, MA 02108">Make Way for Ducklings</option>
+      <option value="72-76 Beach St, Boston, MA 02111">Chinatown Gate</option>
+      <option value="700 Atlantic Ave, Boston, MA 02111">South Station</option>
+      <option value="1-63 Cambridge St, Boston, MA 02114">City Hall</option>
+      <option value="550 Huntington Ave, Boston, MA 02115">Museum of Fine Arts</option>
+      <option value="52-68 Yawkey Way, Boston, MA 02215">Fenway Park</option>
+      <option value="622-646 Boylston St, Boston, MA 02116">Copley Square</option>
+    </select>
+    <b>End: </b>
+    <select id="end">
+      <option value="Columbus Ave,Boston, MA 02120">Northeastern University</option>
+      <option value="142 Dartmouth St, Boston, MA 02116">Back Bay Station</option>
+      <option value="1 Science Park, Boston, MA 02114 ">Museum of Science</option>
+      <option value="9 Union St, Boston, MA 02108">Faneuil Hall</option>
+      <option value="100 Nashua St, Boston, MA 02114">TD Garden</option>
+      <option value="1360-1366 Massachusetts Ave, Cambridge, MA 02138">Harvard University</option>
+      <option value="47-55 Massachusetts Ave, Cambridge, MA 02142">MIT</option>
+      <option value="70 Beacon St, Boston, MA 02108">Make Way for Ducklings</option>
+      <option value="72-76 Beach St, Boston, MA 02111">Chinatown Gate</option>
+      <option value="700 Atlantic Ave, Boston, MA 02111">South Station</option>
+      <option value="1-63 Cambridge St, Boston, MA 02114">City Hall</option>
+      <option value="550 Huntington Ave, Boston, MA 02115">Museum of Fine Arts</option>
+      <option value="52-68 Yawkey Way, Boston, MA 02215">Fenway Park</option>
+      <option value="622-646 Boylston St, Boston, MA 02116">Copley Square</option>
+    </select>
+    </div>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: {lat: 42.355673, lng: -71.072471}
+
+        });
+        directionsDisplay.setMap(map);
+
+        var onChangeHandler = function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        };
+        document.getElementById('start').addEventListener('change', onChangeHandler);
+        document.getElementById('end').addEventListener('change', onChangeHandler);
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: document.getElementById('start').value,
+          destination: document.getElementById('end').value,
+
+
+          travelMode: 'BICYCLING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwoXby1Z5sogLDGtbREFi7KZ6-BXd2tNs&callback=initMap">
+    </script>
+  </body>
+</html>

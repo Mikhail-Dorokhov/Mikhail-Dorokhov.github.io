@@ -84,6 +84,7 @@ body {
   background: url(media/boston.jpg) no-repeat center center;
   background-size: cover;
   font-size: 5rem;
+  font-family: sans-serif;
   padding-top: 130px;
   border-bottom: 4px solid yellow;
 
